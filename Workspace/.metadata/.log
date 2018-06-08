@@ -38,3 +38,331 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jface.text 2 0 2018-05-08 23:10:55.404
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-05-21 17:39:49.181 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-21 17:40:11.820
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Felipex'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-05-21 17:40:20.831
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:41:20.201
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:41:20.206
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:42:10.583
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:42:10.588
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:55:27.437
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:55:27.441
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:55:27.543
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-21 17:55:27.547
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-05-21 19:00:20.996
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Document does not match the AST
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:116)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:231)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:238)
+	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:383)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:248)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.IllegalArgumentException: Document does not match the AST
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.handleException(ASTRewriteAnalyzer.java:4423)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2157)
+	at org.eclipse.jdt.core.dom.ReturnStatement.accept0(ReturnStatement.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisitList(ASTRewriteAnalyzer.java:455)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:449)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2128)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:441)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:447)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2524)
+	at org.eclipse.jdt.core.dom.CatchClause.accept0(CatchClause.java:163)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitList(ASTRewriteAnalyzer.java:435)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:426)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3722)
+	at org.eclipse.jdt.core.dom.TryStatement.accept0(TryStatement.java:279)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:302)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:291)
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
+	... 7 more
+Caused by: org.eclipse.core.runtime.CoreException: End Of File
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readNext(TokenScanner.java:92)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:149)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:162)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.getTokenEndOffset(TokenScanner.java:187)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2147)
+	... 31 more
+!SUBENTRY 1 org.eclipse.jdt.ui 4 4 2018-05-21 19:00:20.998
+!MESSAGE Document does not match the AST
+!STACK 0
+java.lang.IllegalArgumentException: Document does not match the AST
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.handleException(ASTRewriteAnalyzer.java:4423)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2157)
+	at org.eclipse.jdt.core.dom.ReturnStatement.accept0(ReturnStatement.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisitList(ASTRewriteAnalyzer.java:455)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:449)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2128)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:441)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:447)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2524)
+	at org.eclipse.jdt.core.dom.CatchClause.accept0(CatchClause.java:163)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitList(ASTRewriteAnalyzer.java:435)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:426)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3722)
+	at org.eclipse.jdt.core.dom.TryStatement.accept0(TryStatement.java:279)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:302)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:291)
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:231)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:238)
+	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:383)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:248)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.core.runtime.CoreException: End Of File
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readNext(TokenScanner.java:92)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:149)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:162)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.getTokenEndOffset(TokenScanner.java:187)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2147)
+	... 31 more
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-05-21 19:00:21.999
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Document does not match the AST
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:116)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:231)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:238)
+	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:383)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:248)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.IllegalArgumentException: Document does not match the AST
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.handleException(ASTRewriteAnalyzer.java:4423)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2157)
+	at org.eclipse.jdt.core.dom.ReturnStatement.accept0(ReturnStatement.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisitList(ASTRewriteAnalyzer.java:455)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:449)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2128)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:441)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:447)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2524)
+	at org.eclipse.jdt.core.dom.CatchClause.accept0(CatchClause.java:163)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitList(ASTRewriteAnalyzer.java:435)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:426)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3722)
+	at org.eclipse.jdt.core.dom.TryStatement.accept0(TryStatement.java:279)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:302)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:291)
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
+	... 7 more
+Caused by: org.eclipse.core.runtime.CoreException: End Of File
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readNext(TokenScanner.java:92)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:149)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:162)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.getTokenEndOffset(TokenScanner.java:187)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2147)
+	... 31 more
+!SUBENTRY 1 org.eclipse.jdt.ui 4 4 2018-05-21 19:00:22.000
+!MESSAGE Document does not match the AST
+!STACK 0
+java.lang.IllegalArgumentException: Document does not match the AST
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.handleException(ASTRewriteAnalyzer.java:4423)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2157)
+	at org.eclipse.jdt.core.dom.ReturnStatement.accept0(ReturnStatement.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisitList(ASTRewriteAnalyzer.java:455)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:449)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2128)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:441)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:447)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2524)
+	at org.eclipse.jdt.core.dom.CatchClause.accept0(CatchClause.java:163)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitList(ASTRewriteAnalyzer.java:435)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:426)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3722)
+	at org.eclipse.jdt.core.dom.TryStatement.accept0(TryStatement.java:279)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:302)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:291)
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:231)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:238)
+	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:383)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:248)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.core.runtime.CoreException: End Of File
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readNext(TokenScanner.java:92)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:149)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:162)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.getTokenEndOffset(TokenScanner.java:187)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2147)
+	... 31 more
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-05-21 19:00:23.012
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Document does not match the AST
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:116)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:231)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:238)
+	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:383)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:248)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.lang.IllegalArgumentException: Document does not match the AST
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.handleException(ASTRewriteAnalyzer.java:4423)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2157)
+	at org.eclipse.jdt.core.dom.ReturnStatement.accept0(ReturnStatement.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisitList(ASTRewriteAnalyzer.java:455)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:449)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2128)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:441)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:447)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2524)
+	at org.eclipse.jdt.core.dom.CatchClause.accept0(CatchClause.java:163)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitList(ASTRewriteAnalyzer.java:435)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:426)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3722)
+	at org.eclipse.jdt.core.dom.TryStatement.accept0(TryStatement.java:279)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:302)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:291)
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
+	... 7 more
+Caused by: org.eclipse.core.runtime.CoreException: End Of File
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readNext(TokenScanner.java:92)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:149)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:162)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.getTokenEndOffset(TokenScanner.java:187)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2147)
+	... 31 more
+!SUBENTRY 1 org.eclipse.jdt.ui 4 4 2018-05-21 19:00:23.013
+!MESSAGE Document does not match the AST
+!STACK 0
+java.lang.IllegalArgumentException: Document does not match the AST
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.handleException(ASTRewriteAnalyzer.java:4423)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2157)
+	at org.eclipse.jdt.core.dom.ReturnStatement.accept0(ReturnStatement.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisitList(ASTRewriteAnalyzer.java:455)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:449)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2128)
+	at org.eclipse.jdt.core.dom.Block.accept0(Block.java:135)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:441)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.voidVisit(ASTRewriteAnalyzer.java:447)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitUnchangedChildren(ASTRewriteAnalyzer.java:462)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2524)
+	at org.eclipse.jdt.core.dom.CatchClause.accept0(CatchClause.java:163)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:417)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisitList(ASTRewriteAnalyzer.java:435)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.doVisit(ASTRewriteAnalyzer.java:426)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:3722)
+	at org.eclipse.jdt.core.dom.TryStatement.accept0(TryStatement.java:279)
+	at org.eclipse.jdt.core.dom.ASTNode.accept(ASTNode.java:2811)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.internalRewriteAST(ASTRewrite.java:302)
+	at org.eclipse.jdt.core.dom.rewrite.ASTRewrite.rewriteAST(ASTRewrite.java:291)
+	at org.eclipse.jdt.ui.text.java.correction.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:113)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:231)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.createChange(CUCorrectionProposal.java:238)
+	at org.eclipse.jdt.ui.text.java.correction.ChangeCorrectionProposal.getChange(ChangeCorrectionProposal.java:383)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getTextChange(CUCorrectionProposal.java:248)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.getAdditionalProposalInfo(CUCorrectionProposal.java:141)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.core.runtime.CoreException: End Of File
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readNext(TokenScanner.java:92)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:149)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.readToToken(TokenScanner.java:162)
+	at org.eclipse.jdt.internal.core.dom.rewrite.TokenScanner.getTokenEndOffset(TokenScanner.java:187)
+	at org.eclipse.jdt.internal.core.dom.rewrite.ASTRewriteAnalyzer.visit(ASTRewriteAnalyzer.java:2147)
+	... 31 more
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-05-21 19:06:04.044
+!MESSAGE Publishing failed with multiple errors
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2018-05-21 19:06:04.044
+!MESSAGE Could not delete C:\Users\Felipex\Desktop\Estudos\Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Farmacia\WEB-INF\lib\all-themes-1.0.10.jar. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2018-05-21 19:06:04.044
+!MESSAGE Could not delete C:\Users\Felipex\Desktop\Estudos\Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Farmacia\WEB-INF\lib\javax.faces-2.2.8.jar. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2018-05-21 19:06:04.044
+!MESSAGE Could not delete C:\Users\Felipex\Desktop\Estudos\Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Farmacia\WEB-INF\lib\mysql-connector-java-5.1.46.jar. May be locked by another process.
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2018-05-21 19:06:04.044
+!MESSAGE Could not delete C:\Users\Felipex\Desktop\Estudos\Workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Farmacia\WEB-INF\lib\primefaces-6.0.jar. May be locked by another process.
