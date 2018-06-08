@@ -183,7 +183,7 @@ public class FornecedoresDAO {
 
 		FornecedoresDAO fdao = new FornecedoresDAO();
 		Fornecedores f1 = new Fornecedores();
-		f1.setDescricao("lab");
-		fdao.buscarPorDescricao(f1);
+		f1.setDescricao("labioça10");
+		fdao.salvar(f1);
 	}
 }

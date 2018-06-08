@@ -10,19 +10,62 @@
 	<ui:define name="menu">
 		<ui:include src="/includes/menu.xhtml" />
 	</ui:define>
-
 	<ui:define name="conteudo">
-		<p:dataTable emptyMessage="Nenhum Registro Encontrado" value="#{MBFornecedores.itens}" var="item">
+		<h:form id="frmfornecedores">
+			<p:dataTable id="tbfornecedores"
+				emptyMessage="Nenhum Registro Encontrado"
+				value="#{MBFornecedores.itens}" var="item" paginator="true" rows="7">
 
-			<p:column headerText="Código">
-		<h:outputText value="#{item.codigo}"/>
-			</p:column>
+				<f:facet name="header">Lista De Fornecedores</f:facet>
 
-			<p:column headerText="Descrição">
-		<h:outputText value="#{item.descricao}"/>
-			</p:column>
+				<p:column headerText="Código" sortBy="#{item.codigo}"
+					filterBy="#{item.codigo}">
+					<h:outputText value="#{item.codigo}" />
+				</p:column>
 
-		</p:dataTable>
+				<p:column headerText="Descrição" sortBy="#{item.descricao}"
+					filterBy="#{item.descricao}">
+					<h:outputText value="#{item.descricao}" />
+				</p:column>
+				<p:column headerText="Opções">
+				<p:commandButton icon="ui-icon-trash"/>
+				
+							</p:column>
+				<f:facet name="footer">
+					<p:commandButton value="Novo"
+						actionListener="#{MBFornecedores.prepararNovo}"
+						oncomplete="PF('dlgforNovo').show();"
+						update=":frmforNovo:pnforNovo" />
+				</f:facet>
+
+			</p:dataTable>
+		</h:form>
+		<p:dialog widgetVar="dlgforNovo" closable="false" draggable="false"
+			resizable="false" header="Cadastrar Fornecedor" modal="true"
+			appendTo="@(body)">
+			<h:form id="frmforNovo">
+				<h:panelGrid columns="2" id="pnforNovo">
+					<h:outputLabel value="Descricao: " />
+					<h:inputText size="30" maxlength="50"
+						value="#{MBFornecedores.fornecedores.descricao}" />
+				</h:panelGrid>
+				<h:panelGrid columns="2">
+					<p:commandButton value="Salvar"
+						actionListener="#{MBFornecedores.novo}"
+						oncomplete="PF('dlgforNovo').hide();"
+						update=":frmfornecedores:tbfornecedores :msgGlobal" />
+					<p:commandButton value="Cancelar"
+						onclick="PF('dlgforNovo').hide();" />
+				</h:panelGrid>
+			</h:form>
+		</p:dialog>
+		<p:dialog widgetVar="dlgforExcluir" closable="false" draggable="false"
+			resizable="false" header="Cadastrar Fornecedor" modal="true"
+			appendTo="@(body)">
+			
+			
+			</p:dialog>
+
 	</ui:define>
 
 </ui:composition>
