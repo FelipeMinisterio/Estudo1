@@ -33,7 +33,7 @@ public class FornecedoresDAO {
 
 	}
 
-	public void excluir(Fornecedores f) {
+	public Boolean excluir(Fornecedores f) {
 		StringBuilder sql = new StringBuilder();
 
 		sql.append("DELETE FROM fornecedores ");
@@ -45,9 +45,11 @@ public class FornecedoresDAO {
 			comando.setLong(1, f.getCodigo());
 			comando.executeUpdate();
 			System.out.println("Sucesso ao excluir!");
+			return true;
 		} catch (SQLException e) {
 			System.out.println("Falha ao excluir!");
 			e.printStackTrace();
+			return false;
 		}
 
 	}
@@ -183,7 +185,7 @@ public class FornecedoresDAO {
 
 		FornecedoresDAO fdao = new FornecedoresDAO();
 		Fornecedores f1 = new Fornecedores();
-		f1.setDescricao("labioça10");
+		f1.setDescricao("Alan");
 		fdao.salvar(f1);
 	}
 }

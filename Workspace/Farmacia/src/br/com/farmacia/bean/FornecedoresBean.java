@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.faces.model.ListDataModel;
-
 import br.com.farmacia.DAO.FornecedoresDAO;
 import br.com.farmacia.domain.Fornecedores;
 import br.com.farmacia.util.JSFUtil;
@@ -16,6 +14,24 @@ import br.com.farmacia.util.JSFUtil;
 public class FornecedoresBean {
 
 	private Fornecedores fornecedores;
+	private ArrayList<Fornecedores> itens;
+	private ArrayList<Fornecedores> itensfiltrados;
+
+	public ArrayList<Fornecedores> getItens() {
+		return itens;
+	}
+
+	public void setItens(ArrayList<Fornecedores> itens) {
+		this.itens = itens;
+	}
+
+	public ArrayList<Fornecedores> getItensfiltrados() {
+		return itensfiltrados;
+	}
+
+	public void setItensfiltrados(ArrayList<Fornecedores> itensfiltrados) {
+		this.itensfiltrados = itensfiltrados;
+	}
 
 	public Fornecedores getFornecedores() {
 		return fornecedores;
@@ -25,23 +41,13 @@ public class FornecedoresBean {
 		this.fornecedores = fornecedores;
 	}
 
-	private ListDataModel<Fornecedores> itens;
-
-	public ListDataModel<Fornecedores> getItens() {
-		return itens;
-	}
-
-	public void setItens(ListDataModel<Fornecedores> itens) {
-		this.itens = itens;
-	}
-
 	@PostConstruct
 	public void prepararPesquisa() {
 
 		try {
 			FornecedoresDAO fdao = new FornecedoresDAO();
-			ArrayList<Fornecedores> lista = fdao.listar();
-			itens = new ListDataModel<Fornecedores>(lista);
+			itens = fdao.listar();
+
 		} catch (Exception e) {
 			JSFUtil.adicionarMensagemErro("ex.getMessage()");
 			e.printStackTrace();
@@ -58,13 +64,39 @@ public class FornecedoresBean {
 		try {
 			FornecedoresDAO fdao = new FornecedoresDAO();
 			fdao.salvar(fornecedores);
-			
-			ArrayList<Fornecedores> lista = fdao.listar();
-			itens = new ListDataModel<Fornecedores>(lista);
-			JSFUtil.adicionarMensagemSucesso("Salvo com sucesso !!");
+
+			itens = fdao.listar();
+
+			JSFUtil.adicionarMensagemSucesso("Fornecedor Salvo com sucesso !!");
 
 		} catch (Exception e) {
 			JSFUtil.adicionarMensagemErro("ex.getMessage()");
+		}
+	}
+
+	public void Excluir() {
+		FornecedoresDAO fdao = new FornecedoresDAO();
+		fdao.excluir(fornecedores);
+		if (fdao.excluir(fornecedores) == true) {
+			itens = fdao.listar();
+
+			JSFUtil.adicionarMensagemSucesso("Fornecedor excluído com sucesso!");
+		} else {
+			JSFUtil.adicionarMensagemErro("Não é possível excluir um Fornecedor que tenha um produto associado!");
+		}
+	}
+
+	public void Editar() {
+		try {
+			FornecedoresDAO fdao = new FornecedoresDAO();
+			fdao.editar(fornecedores);
+
+			itens = fdao.listar();
+
+			JSFUtil.adicionarMensagemSucesso("Fornecedor editado com sucesso!");
+		} catch (Exception e) {
+			JSFUtil.adicionarMensagemErro("Não é possível editar funcionário");
+			e.printStackTrace();
 		}
 	}
 

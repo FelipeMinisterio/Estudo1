@@ -13,8 +13,11 @@
 	<ui:define name="conteudo">
 		<h:form id="frmfornecedores">
 			<p:dataTable id="tbfornecedores"
+			widgetVar="tabelaFornecedores"
 				emptyMessage="Nenhum Registro Encontrado"
-				value="#{MBFornecedores.itens}" var="item" paginator="true" rows="7">
+				value="#{MBFornecedores.itens}" var="item"
+				filteredValue="#{MBFornecedores.itensfiltrados}" paginator="true"
+				rows="7">
 
 				<f:facet name="header">Lista De Fornecedores</f:facet>
 
@@ -28,9 +31,19 @@
 					<h:outputText value="#{item.descricao}" />
 				</p:column>
 				<p:column headerText="Opções">
-				<p:commandButton icon="ui-icon-trash"/>
-				
-							</p:column>
+					<p:commandButton icon="ui-icon-trash"
+						oncomplete="PF('dlgforExcluir').show();"
+						update=":frmforExcluir:pnforExcluir">
+					<f:setPropertyActionListener value="#{item}" target="#{MBFornecedores.fornecedores}"></f:setPropertyActionListener>
+					</p:commandButton>
+
+					<p:commandButton icon="ui-icon-pencil"
+						oncomplete="PF('dlgforEditar').show();"
+						update=":frmforEditar:pnforEditar">
+					<f:setPropertyActionListener value="#{item}" target="#{MBFornecedores.fornecedores}"></f:setPropertyActionListener>
+					</p:commandButton>
+
+				</p:column>
 				<f:facet name="footer">
 					<p:commandButton value="Novo"
 						actionListener="#{MBFornecedores.prepararNovo}"
@@ -52,7 +65,7 @@
 				<h:panelGrid columns="2">
 					<p:commandButton value="Salvar"
 						actionListener="#{MBFornecedores.novo}"
-						oncomplete="PF('dlgforNovo').hide();"
+						oncomplete="PF('dlgforNovo').hide(); PF('tabelaFornecedores').clearFilters();"
 						update=":frmfornecedores:tbfornecedores :msgGlobal" />
 					<p:commandButton value="Cancelar"
 						onclick="PF('dlgforNovo').hide();" />
@@ -60,12 +73,47 @@
 			</h:form>
 		</p:dialog>
 		<p:dialog widgetVar="dlgforExcluir" closable="false" draggable="false"
-			resizable="false" header="Cadastrar Fornecedor" modal="true"
+			resizable="false" header="Excluir Fornecedor" modal="true"
 			appendTo="@(body)">
-			
-			
-			</p:dialog>
 
+			<h:form id="frmforExcluir">
+				<h:panelGrid id="pnforExcluir" columns="2">
+					<h:outputText value="Código" />
+					<h:outputText value="#{MBFornecedores.fornecedores.codigo}" />
+					<h:outputText value="Descrição" />
+					<h:outputText value="#{MBFornecedores.fornecedores.descricao}" />
+				</h:panelGrid>
+				<h:panelGrid columns="2">
+					<p:commandButton value="Excluir"
+						actionListener="#{MBFornecedores.Excluir}"
+						oncomplete="PF('dlgforExcluir').hide(); PF('tabelaFornecedores').clearFilters();"
+						update=":frmfornecedores:tbfornecedores :msgGlobal" />
+					<p:commandButton value="Cancelar"
+						onclick="PF('dlgforExcluir').hide();" />
+				</h:panelGrid>
+			</h:form>
+		</p:dialog>
+
+		<p:dialog widgetVar="dlgforEditar" closable="false" draggable="false"
+			resizable="false" header="Editar Fornecedor" modal="true"
+			appendTo="@(body)">
+
+			<h:form id="frmforEditar">
+				<h:panelGrid id="pnforEditar" columns="2">
+					<h:outputText value="Código" />
+					<h:outputText value="#{MBFornecedores.fornecedores.codigo}" />
+					<h:outputText value="Descrição" />
+					<h:inputText value="#{MBFornecedores.fornecedores.descricao}" />
+				</h:panelGrid>
+				<h:panelGrid columns="2">
+					<p:commandButton value="Editar"
+						actionListener="#{MBFornecedores.Editar}"
+						oncomplete="PF('dlgforEditar').hide(); PF('tabelaFornecedores').clearFilters();"
+						update=":frmfornecedores:tbfornecedores :msgGlobal" />
+					<p:commandButton value="Cancelar"
+						onclick="PF('dlgforEditar').hide();" />
+				</h:panelGrid>
+			</h:form>
+		</p:dialog>
 	</ui:define>
-
 </ui:composition>

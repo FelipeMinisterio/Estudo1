@@ -40,7 +40,13 @@ public class Produtos {
 		this.fornecedores = fornecedores;
 	}
 	
-	
+	@Override
+	public String toString() {
+
+		String saida = "Codigo: "+codigo + " \n" + "Descrição: "+descricao + " \n" + "Preço: " + preco + " \n" + "Quantidade: " + quantidade + " \n" + "Fornecedor: " + fornecedores ;
+
+		return saida;
+	}
 	
 	
 }
