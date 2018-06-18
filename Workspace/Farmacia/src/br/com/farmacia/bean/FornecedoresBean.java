@@ -74,7 +74,7 @@ public class FornecedoresBean {
 		}
 	}
 
-	public void Excluir() {
+	public void excluir() {
 		FornecedoresDAO fdao = new FornecedoresDAO();
 		fdao.excluir(fornecedores);
 		if (fdao.excluir(fornecedores) == true) {
@@ -86,7 +86,7 @@ public class FornecedoresBean {
 		}
 	}
 
-	public void Editar() {
+	public void editar() {
 		try {
 			FornecedoresDAO fdao = new FornecedoresDAO();
 			fdao.editar(fornecedores);

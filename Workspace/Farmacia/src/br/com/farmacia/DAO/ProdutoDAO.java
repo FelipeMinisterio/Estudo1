@@ -6,11 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.junit.Test;
+
 import br.com.farmacia.ConnectionFactory.ConexaoFactory;
 import br.com.farmacia.domain.Fornecedores;
 import br.com.farmacia.domain.Produtos;
 
 public class ProdutoDAO {
+	
 	public void salvar(Produtos p) {
 		StringBuilder sql = new StringBuilder();
 
@@ -34,6 +37,7 @@ public class ProdutoDAO {
 		}
 
 	}
+
 	public ArrayList<Produtos> listar() {
 		StringBuilder sql = new StringBuilder();
 
@@ -60,15 +64,15 @@ public class ProdutoDAO {
 				p.setPreco(resultado.getDouble("p.preco"));
 				p.setQuantidade(resultado.getLong("p.quantidade"));
 				p.setFornecedores(f);
-				
+
 				lista.add(p);
 			}
-			
+
 			for (Produtos p : lista) {
 				System.out.println("Resultado: \n" + p);
 
 			}
-			System.out.println("Sucesso ao listar");
+			System.out.println("Sucesso ao listar \n");
 			return lista;
 
 		} catch (Exception e) {
@@ -78,4 +82,48 @@ public class ProdutoDAO {
 		}
 	}
 
+	public Boolean excluir(Produtos p) {
+		StringBuilder sql = new StringBuilder();
+
+		sql.append("DELETE FROM produtos ");
+		sql.append("WHERE codigo = ? ");
+
+		try {
+			Connection conexao = ConexaoFactory.getConnection();
+			PreparedStatement comando = conexao.prepareStatement(sql.toString());
+			comando.setLong(1, p.getCodigo());
+			comando.executeUpdate();
+			System.out.println("Sucesso ao excluir!");
+			return true;
+		} catch (SQLException e) {
+			System.out.println("Falha ao excluir!");
+			e.printStackTrace();
+			return false;
+		}
+
+	}
+
+	public void editar(Produtos p) {
+		StringBuilder sql = new StringBuilder();
+
+		sql.append("UPDATE produtos ");
+		sql.append("SET descricao = ?, preco = ?, quantidade = ?, fornecedores_codigo = ?  ");
+		sql.append("WHERE codigo = ? ");
+
+		try {
+			Connection conexao = ConexaoFactory.getConnection();
+			PreparedStatement comando = conexao.prepareStatement(sql.toString());
+			comando.setString(1, p.getDescricao());
+			comando.setDouble(2, p.getPreco());
+			comando.setLong(3, p.getQuantidade());
+			comando.setLong(4, p.getFornecedores().getCodigo());
+			comando.setLong(5, p.getCodigo());
+			comando.executeUpdate();
+			System.out.println("Sucesso ao editar!");
+		} catch (SQLException e) {
+			System.out.println("Falha ao editar!");
+			e.printStackTrace();
+		}
+
+	}
 }

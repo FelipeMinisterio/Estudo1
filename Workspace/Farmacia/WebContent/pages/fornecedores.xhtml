@@ -12,8 +12,7 @@
 	</ui:define>
 	<ui:define name="conteudo">
 		<h:form id="frmfornecedores">
-			<p:dataTable id="tbfornecedores"
-			widgetVar="tabelaFornecedores"
+			<p:dataTable id="tbfornecedores" widgetVar="tabelaFornecedores"
 				emptyMessage="Nenhum Registro Encontrado"
 				value="#{MBFornecedores.itens}" var="item"
 				filteredValue="#{MBFornecedores.itensfiltrados}" paginator="true"
@@ -34,16 +33,18 @@
 					<p:commandButton icon="ui-icon-trash"
 						oncomplete="PF('dlgforExcluir').show();"
 						update=":frmforExcluir:pnforExcluir">
-					<f:setPropertyActionListener value="#{item}" target="#{MBFornecedores.fornecedores}"></f:setPropertyActionListener>
+						<f:setPropertyActionListener value="#{item}"
+							target="#{MBFornecedores.fornecedores}"></f:setPropertyActionListener>
 					</p:commandButton>
 
 					<p:commandButton icon="ui-icon-pencil"
 						oncomplete="PF('dlgforEditar').show();"
 						update=":frmforEditar:pnforEditar">
-					<f:setPropertyActionListener value="#{item}" target="#{MBFornecedores.fornecedores}"></f:setPropertyActionListener>
+						<f:setPropertyActionListener value="#{item}"
+							target="#{MBFornecedores.fornecedores}"></f:setPropertyActionListener>
 					</p:commandButton>
-
 				</p:column>
+
 				<f:facet name="footer">
 					<p:commandButton value="Novo"
 						actionListener="#{MBFornecedores.prepararNovo}"
@@ -58,16 +59,17 @@
 			appendTo="@(body)">
 			<h:form id="frmforNovo">
 				<h:panelGrid columns="2" id="pnforNovo">
-					<h:outputLabel value="Descricao: " />
-					<h:inputText size="30" maxlength="50"
-						value="#{MBFornecedores.fornecedores.descricao}" />
+					<h:outputLabel value="Descricao: " for="txtDescNovo" />
+					<h:inputText id="txtDescNovo" size="30" maxlength="50"
+						value="#{MBFornecedores.fornecedores.descricao}" required="true"
+						requiredMessage="O campo descriçao é obrigatório" />
 				</h:panelGrid>
 				<h:panelGrid columns="2">
 					<p:commandButton value="Salvar"
 						actionListener="#{MBFornecedores.novo}"
-						oncomplete="PF('dlgforNovo').hide(); PF('tabelaFornecedores').clearFilters();"
+						oncomplete="verificar(xhr, status, args, 'dlgforNovo','tbfornecedores');"
 						update=":frmfornecedores:tbfornecedores :msgGlobal" />
-					<p:commandButton value="Cancelar"
+					<p:commandButton value="Cancelar" process="@this"
 						onclick="PF('dlgforNovo').hide();" />
 				</h:panelGrid>
 			</h:form>
@@ -85,10 +87,10 @@
 				</h:panelGrid>
 				<h:panelGrid columns="2">
 					<p:commandButton value="Excluir"
-						actionListener="#{MBFornecedores.Excluir}"
+						actionListener="#{MBFornecedores.excluir}"
 						oncomplete="PF('dlgforExcluir').hide(); PF('tabelaFornecedores').clearFilters();"
 						update=":frmfornecedores:tbfornecedores :msgGlobal" />
-					<p:commandButton value="Cancelar"
+					<p:commandButton value="Cancelar" process="@this"
 						onclick="PF('dlgforExcluir').hide();" />
 				</h:panelGrid>
 			</h:form>
@@ -102,15 +104,17 @@
 				<h:panelGrid id="pnforEditar" columns="2">
 					<h:outputText value="Código" />
 					<h:outputText value="#{MBFornecedores.fornecedores.codigo}" />
-					<h:outputText value="Descrição" />
-					<h:inputText value="#{MBFornecedores.fornecedores.descricao}" />
+					<h:outputLabel value="Descrição: " for="txtEdtFor" />
+					<h:inputText id="txtEdtFor"
+						value="#{MBFornecedores.fornecedores.descricao}" required="true"
+						requiredMessage="O campo descriçao é obrigatório" />
 				</h:panelGrid>
 				<h:panelGrid columns="2">
 					<p:commandButton value="Editar"
-						actionListener="#{MBFornecedores.Editar}"
-						oncomplete="PF('dlgforEditar').hide(); PF('tabelaFornecedores').clearFilters();"
+						actionListener="#{MBFornecedores.editar}"
+						oncomplete="verificar(xhr, status, args, 'dlgforEditar','tbfornecedores');"
 						update=":frmfornecedores:tbfornecedores :msgGlobal" />
-					<p:commandButton value="Cancelar"
+					<p:commandButton value="Cancelar" process="@this"
 						onclick="PF('dlgforEditar').hide();" />
 				</h:panelGrid>
 			</h:form>
